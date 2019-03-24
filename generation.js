@@ -77,17 +77,16 @@ class Generation {
 
 	draw() {
 		for (let i = 0; i < width/k; i++) {
-			for (let j = 0; j < height/k; j++){
+			for (let j = 0; j < height/k; j++) {
+				stroke('#DAD2B9')
+				rect(i*k, j*k, k, k)
+				
 				if (this.field[i][j] == 1) {
-					rect(i*k, j*k, k, k)
 					const rx = (i*k + (i+1)*k) / 2
 					const ry = (j*k + (j+1)*k) / 2
-					fill('black')
+					fill('#4C5760')
 					ellipse(rx, ry, k - 4)
 					noFill()
-				}
-				if (this.field[i][j] == 0)	{
-					rect(i*k, j*k, k, k)
 				}
 			}
 		}		
