@@ -35,9 +35,13 @@ function keyPressed() {
 }
 
 function mousePressed() {
-	gen.getAndDraw('can kill')
-	last_x = mouseX
-	last_y = mouseY
+	const on_field = (mouseX < width && mouseY < height)
+
+	if (on_field) {
+		gen.getAndDraw('can kill')
+		last_x = mouseX
+		last_y = mouseY
+	}
 }
 
 function mouseDragged() {
