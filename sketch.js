@@ -41,7 +41,9 @@ function mousePressed() {
 }
 
 function mouseDragged() {
-	if (dist(last_x, last_y, mouseX, mouseY) > 5 ) {
+	const really_dragged = (dist(last_x, last_y, mouseX, mouseY) > 5)
+	const on_field = (mouseX < width && mouseY < height)
+	if (really_dragged && on_field) {
 		gen.getAndDraw()
 	}
 }
