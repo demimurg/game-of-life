@@ -37,6 +37,7 @@ class Generation {
 
 
 	startCondition() {
+		stroke('#DAD2B9')
 		for (let i = 0; i < width/k; i++) {
 			this.field[i] = []
 			for (let j = 0; j < height/k; j++){
@@ -79,7 +80,9 @@ class Generation {
 		for (let i = 0; i < width/k; i++) {
 			for (let j = 0; j < height/k; j++) {
 				stroke('#DAD2B9')
+				strokeWeight(2)
 				rect(i*k, j*k, k, k)
+				noStroke()
 				
 				if (this.field[i][j] == 1) {
 					const rx = (i*k + (i+1)*k) / 2

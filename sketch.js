@@ -4,9 +4,9 @@ let gen, last_x, last_y
 
 
 function setup() {
-	createCanvas(801, 801)
-	width -= 1
-	height -= 1
+	createCanvas(802, 802)
+	width -= 2
+	height -= 2
 	gen = new Generation()
 	gen.startCondition()
 	frameRate(10)
@@ -28,7 +28,9 @@ function keyPressed() {
 				loop()
 				break
 		}
-		p++
+		p++ 
+	} else if (keyCode == 75) {
+		gen.startCondition()
 	}
 }
 
